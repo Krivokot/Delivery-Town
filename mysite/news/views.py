@@ -42,9 +42,6 @@ def user_logout(request):
     logout(request)
     return redirect('login')
 
-def user_logout1(request):
-    logout(request)
-    return redirect('login')
 
 def contact(request):
     if request.method == 'POST':
