@@ -6,5 +6,65 @@
     <link rel="stylesheet" href="style.css" />
     <title>Курьерская служба Delivery Town</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Delivery Town Темрюк</h1>
+      <img src=""></img>
+      <p>
+       <ul>
+         <p>Прайс</p>
+         <li>
+          Темрюк 1 район (от Моста до 10 остановки) - 100 руб.
+         </li>
+         <li>
+          Темрюк 2 район - 150 руб.
+         </li>
+         <li>
+          Голубицкая, Курчанская - 250 руб.
+         </li>
+       </ul>
+      </p>
+      <form method="POST">
+        <fieldset>
+        <legend>Закажите доставку</legend>
+        <ul>
+          <li>
+            <label for="form__name">Имя</label>
+            <input type="text" id="form__name">
+          </li>
+          <li>
+            <label for="form__phone">Телефон</label>
+            <input type="phone" id="form__phone">
+          </li>
+          <li>
+            <label for="form__shop">Магазин</label>
+            <input type="text" id="form__shop">
+          </li>
+          <li>
+            <label for="form__product">Что купить?</label>
+            <textarea cols="30" rows="10"></textarea>
+          </li>
+          <li>
+            <label for="form__adress">Адрес</label>
+            <input type="text" id="form__adress">
+          </li>
+          <li>
+            <label for="form__pay">Оплата</label>
+            <select id="form__pay">
+              <option value="nocash">Безналичная</option>
+              <option value="cash">Наличная</option>
+            </select>
+          </li>
+          <li>
+            <label for="form__personaldata">Принимаю условия обработки персональных данных</label>
+            <input type="checkbox" id="form__personaldata">
+          </li>
+          <li>
+            <input type="submit" id="form__submit" value="Отправить">
+          </li>
+        </ul>
+        </fieldset>
+      </form>
+    </header>
+  </body>
 </html>
