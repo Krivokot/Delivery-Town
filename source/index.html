@@ -3,68 +3,128 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="preload" href="/fonts/bitter.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <title>Курьерская служба Delivery Town</title>
   </head>
   <body>
-    <header>
-      <h1>Delivery Town Темрюк</h1>
-      <img src="" alt="Логотип компании"></img>
-      <p>
-       <ul>
-         <p>Прайс</p>
-         <li>
-          Темрюк 1 район (от Моста до 10 остановки) - 100 руб.
-         </li>
-         <li>
-          Темрюк 2 район - 150 руб.
-         </li>
-         <li>
-          Голубицкая, Курчанская - 250 руб.
-         </li>
-       </ul>
-      </p>
-      <form method="POST">
-        <fieldset>
-        <legend>Закажите доставку</legend>
-        <ul>
-          <li>
-            <label for="form__name">Имя</label>
-            <input type="text" id="form__name">
-          </li>
-          <li>
-            <label for="form__phone">Телефон</label>
-            <input type="phone" id="form__phone">
-          </li>
-          <li>
-            <label for="form__shop">Магазин</label>
-            <input type="text" id="form__shop">
-          </li>
-          <li>
-            <label for="form__product">Что купить?</label>
-            <textarea cols="30" rows="10"></textarea>
-          </li>
-          <li>
-            <label for="form__adress">Адрес</label>
-            <input type="text" id="form__adress">
-          </li>
-          <li>
-            <label for="form__pay">Оплата</label>
-            <select id="form__pay">
-              <option value="nocash">Безналичная</option>
-              <option value="cash">Наличная</option>
-            </select>
-          </li>
-          <li>
-            <label for="form__personaldata">Принимаю условия обработки персональных данных</label>
-            <input type="checkbox" id="form__personaldata">
-          </li>
-          <li>
-            <input type="submit" id="form__submit" value="Отправить">
-          </li>
-        </ul>
+    <header class="page-header">
+      <h1 class="visually-hidden">Delivery Town Темрюк</h1>
+      <a href="#" class="link page-header__logo">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="#">
+          <source media="(min-width: 768px)" srcset="#">
+          <img class="page-header__logo-image" src="#" alt="Курьерская служба Delivery Town">
+        </picture>
+      </a>
+    </header>
+    <main class="page-main">
+      <section class="price">
+        <p class="text-box price-description">
+          <ul class="price-list site-list">
+            <p class="price-list__label">Прайс</p>
+            <li class="price-list__item site-list__item">
+              Темрюк 1 район (от Моста до 10 остановки) - 100 руб.
+            </li>
+            <li class="price-list__item site-list__item">
+              Темрюк 2 район - 150 руб.
+            </li>
+            <li class="price-list__item site-list__item">
+              Голубицкая, Курчанская - 250 руб.
+            </li>
+          </ul>
+        </p>
+      </section>
+      <form class="main-form" method="POST">
+        <fieldset class="main-form-fieldset">
+          <legend class="title main-form-fieldset__label">Закажите доставку</legend>
+          <ul class="main-form-fieldset__list site-list">
+            <li class="main-form-fieldset__item site-list__item">
+              <label class="main-form-fieldset__item-label" for="form__name">Имя</label>
+              <input class="main-form-fieldset__item-field" type="text" id="form__name">
+            </li>
+            <li class="main-form-fieldset__item site-list__item">
+              <label class="main-form-fieldset__item-label" for="form__phone">Телефон</label>
+              <input class="main-form-fieldset__item-field" type="phone" id="form__phone">
+            </li>
+            <li class="main-form-fieldset__item site-list__item">
+              <label class="main-form-fieldset__item-label" for="form__shop">Магазин</label>
+              <input class="main-form-fieldset__item-field" type="text" id="form__shop">
+            </li>
+            <li class="main-form-fieldset__item site-list__item">
+              <label class="main-form-fieldset__item-label" for="form__product">Что купить?</label>
+              <textarea class="main-form-fieldset__item-field" cols="30" rows="10"></textarea>
+            </li>
+            <li class="main-form-fieldset__item site-list__item">
+              <label class="main-form-fieldset__item-label" for="form__adress">Адрес</label>
+              <input class="main-form-fieldset__item-field" type="text" id="form__adress">
+            </li>
+            <li class="main-form-fieldset__item site-list__item">
+              <label class="main-form-fieldset__item-label" for="form__pay">Оплата</label>
+              <select class="main-form-fieldset__item-field" id="form__pay">
+                <option value="nocash">Безналичная</option>
+                <option value="cash">Наличная</option>
+              </select>
+            </li>
+            <li class="main-form-fieldset__item site-list__item">
+              <label class="main-form-fieldset__item-label" for="form__personaldata">Принимаю условия обработки персональных данных</label>
+              <input class="main-form-fieldset__item-field" type="checkbox" id="form__personaldata">
+            </li>
+            <li class="main-form-fieldset__item site-list__item">
+              <input class="buttton main-form-fieldset__item-field" type="submit" id="form__submit" value="Отправить">
+            </li>
+          </ul>
         </fieldset>
       </form>
-    </header>
+    </main>
+    <footer class="page-footer">
+      <ul class="page-footer__social site-list">
+        <li class="page-footer__social-item site-list__item">
+          <a class="link page-footer__social-link page-footer__social-link--vk" href="https://vk.com/delivery_town">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="#"/>
+              <source media="(min-width: 768px)" srcset="#"/>
+              <img class="page-footer__social-img page-footer__social-img--vk" src="#" alt="Мы Вконтакте" />
+            </picture>
+          </a>
+        </li>
+        <li class="page-footer__social-item site-list__item">
+          <a class="link page-footer__social-link page-footer__social-link--inst" href="https://www.instagram.com/delivery_town_23/">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="#" />
+              <source media="(min-width: 768px)" srcset="#" />
+              <img class="page-footer__social-img page-footer__social-img--insta" src="#" alt="Мы в Инстаграм" />
+            </picture>
+          </a>
+        </li>
+        <li class="page-footer__social-item site-list__item">
+          <a class="link page-footer__social-link page-footer__social-link--wa" href="https://wa.me/79024071054">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="#" />
+              <source media="(min-width: 768px)" srcset="#" />
+              <img class="page-footer__social-img page-footer__social-img--wa" src="#" alt="Мы в WhatsApp" />
+            </picture>
+          </a>
+        </li>
+        <li class="page-footer__social-item site-list__item">
+          <a class="link page-footer__social-link page-footer__social-link--tg" href="https://t.me/Delivery_town">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="#" />
+              <source media="(min-width: 768px)" srcset="#" />
+              <img class="page-footer__social-img page-footer__social-img--tg" src="#" alt="Мы в Telegram" />
+            </picture>
+          </a>
+        </li>
+        <li class="page-footer__social-item site-list__item">
+          <a class="link page-footer__social-link page-footer__social-link--vb" href=viber://add?number=79024071054">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="#" />
+              <source media="(min-width: 768px)" srcset="#" />
+              <img class="page-footer__social-img page-footer__social-img--vb" src="#" alt="Мы в Viber" />
+            </picture>
+          </a>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>
