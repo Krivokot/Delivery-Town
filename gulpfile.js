@@ -12,6 +12,7 @@ var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var del = require("del");
 var imagedel = require("del");
+var autoImports = require("gulp-auto-imports");
 
 gulp.task("del", function(){
   return del("build");
@@ -42,6 +43,13 @@ gulp.task("images", function() {
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("build/img"));
+});
+
+gulp.task("sass:load", function () {
+  var dest = "source/sass"
+  return gulp.src("./source/blocks/**/*.scss")
+    .pipe(autoImports({ preset: "scss", dest: dest }))
+    .pipe(gulp.dest(dest))
 });
 
 gulp.task("norm", function () {
@@ -92,5 +100,5 @@ gulp.task("start", gulp.series("css", "server"));
 // gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
 // gulp.watch("source/*.html").on("change", server.reload);
 
-gulp.task("build", gulp.series("del", "copy", "images", "css", "norm"))
+gulp.task("build", gulp.series("del", "copy", "images","sass:load", "css", "norm"))
 gulp.task("start", gulp.series("build", "server"));
