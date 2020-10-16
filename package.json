@@ -4,7 +4,8 @@
   "description": "Репозиторий разработки Delivery Town\r И не только",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build",
+    "start": "gulp start"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,29 @@
   },
   "homepage": "https://github.com/Krivokot/Delivery-Town#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "autoprefixer": "9.5.x",
+    "bem-validate": "^1.1.2",
+    "browser-sync": "2.26.x",
+    "del": "^4.1.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-plumber": "1.2.x",
+    "gulp-postcss": "8.0.x",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "4.0.x",
+    "gulp-sourcemaps": "2.6.x"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "engines": {
+    "node": "12.18.2"
+  },
+  "dependencies": {
+    "chrome": "^0.1.0",
+    "set-default-browser": "^1.0.1"
   }
-
-
 }
