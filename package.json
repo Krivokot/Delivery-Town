@@ -1,0 +1,24 @@
+{
+  "name": "delivery-town",
+  "version": "1.0.0",
+  "description": "Репозиторий разработки Delivery Town\r И не только",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krivokot/Delivery-Town.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Krivokot/Delivery-Town/issues"
+  },
+  "homepage": "https://github.com/Krivokot/Delivery-Town#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+
+
+}
