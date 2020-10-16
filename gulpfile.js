@@ -47,10 +47,15 @@ gulp.task("images", function() {
 
 gulp.task("sass:load", function () {
   var dest = "source/sass"
-  return gulp.src("./source/blocks/**/*.scss")
+  return gulp.src("source/sass/blocks/**/*.scss")
     .pipe(autoImports({ preset: "scss", dest: dest }))
     .pipe(gulp.dest(dest))
 });
+
+gulp.task('watch', function (done) {
+    gulp.watch("source/**/*.scss", gulp.series('sass'))
+    done()
+  });
 
 gulp.task("norm", function () {
   return gulp.src("source/css/normalize.css")
@@ -91,14 +96,15 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.watch("build/css/**/*.css", gulp.series("css", "norm"));
-  gulp.watch("build/*.html").on("change", server.reload);
+  // gulp.watch("build/css/**/*.css", gulp.series("css", "norm"));
+  // gulp.watch("build/*.html").on("change", server.reload);
 });
 
 gulp.task("start", gulp.series("css", "server"));
 
-// gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-// gulp.watch("source/*.html").on("change", server.reload);
+gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css", "norm"));
+gulp.watch("source/*.html").on("change", server.reload);
+
 
 gulp.task("build", gulp.series("del", "copy", "images","sass:load", "css", "norm"))
 gulp.task("start", gulp.series("build", "server"));
