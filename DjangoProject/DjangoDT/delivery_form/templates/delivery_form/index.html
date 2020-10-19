@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -35,47 +36,49 @@
           </ul>
         </p>
       </section>
-      <form class="main-form" method="POST">
-        <fieldset class="main-form-fieldset">
-          <h2 class="visually-hidden">Форма заказа доставки</h2>
-          <legend class="title main-form-fieldset__label">Закажите доставку</legend>
-          <ul class="main-form-fieldset__list site-list">
-            <li class="main-form-fieldset__item site-list__item">
-              <label class="main-form-fieldset__item-label" for="form__name">Имя</label>
-              <input class="main-form-fieldset__item-field" type="text" id="form__name">
-            </li>
-            <li class="main-form-fieldset__item site-list__item">
-              <label class="main-form-fieldset__item-label" for="form__phone">Телефон</label>
-              <input class="main-form-fieldset__item-field" type="phone" id="form__phone">
-            </li>
-            <li class="main-form-fieldset__item site-list__item">
-              <label class="main-form-fieldset__item-label" for="form__shop">Магазин</label>
-              <input class="main-form-fieldset__item-field" type="text" id="form__shop">
-            </li>
-            <li class="main-form-fieldset__item site-list__item">
-              <label class="main-form-fieldset__item-label" for="form__product">Что купить?</label>
-              <textarea class="main-form-fieldset__item-field" cols="30" rows="10"></textarea>
-            </li>
-            <li class="main-form-fieldset__item site-list__item">
-              <label class="main-form-fieldset__item-label" for="form__adress">Адрес</label>
-              <input class="main-form-fieldset__item-field" type="text" id="form__adress">
-            </li>
-            <li class="main-form-fieldset__item site-list__item">
-              <label class="main-form-fieldset__item-label" for="form__pay">Оплата</label>
-              <select class="main-form-fieldset__item-field" id="form__pay">
-                <option value="nocash">Безналичная</option>
-                <option value="cash">Наличная</option>
-              </select>
-            </li>
-            <li class="main-form-fieldset__item site-list__item">
-              <label class="main-form-fieldset__item-label" for="form__personaldata">Принимаю условия обработки персональных данных</label>
-              <input class="main-form-fieldset__item-field" type="checkbox" id="form__personaldata">
-            </li>
-            <li class="main-form-fieldset__item site-list__item">
-              <input class="buttton main-form-fieldset__item-field" type="submit" id="form__submit" value="Отправить">
-            </li>
-          </ul>
-        </fieldset>
+      <form class="main-form" action="{% url 'add_send_form' %}" method="POST">
+          {% csrf_token %}
+          {{ form.as_p }}
+<!--        <fieldset class="main-form-fieldset">-->
+<!--          <h2 class="visually-hidden">Форма заказа доставки</h2>-->
+<!--          <legend class="title main-form-fieldset__label">Закажите доставку</legend>-->
+<!--          <ul class="main-form-fieldset__list site-list">-->
+<!--            <li class="main-form-fieldset__item site-list__item">-->
+<!--              <label class="main-form-fieldset__item-label" for="form__name">Имя</label>-->
+<!--              <input class="main-form-fieldset__item-field" type="text" id="form__name">-->
+<!--            </li>-->
+<!--            <li class="main-form-fieldset__item site-list__item">-->
+<!--              <label class="main-form-fieldset__item-label" for="form__phone">Телефон</label>-->
+<!--              <input class="main-form-fieldset__item-field" type="phone" id="form__phone">-->
+<!--            </li>-->
+<!--            <li class="main-form-fieldset__item site-list__item">-->
+<!--              <label class="main-form-fieldset__item-label" for="form__shop">Магазин</label>-->
+<!--              <input class="main-form-fieldset__item-field" type="text" id="form__shop">-->
+<!--            </li>-->
+<!--            <li class="main-form-fieldset__item site-list__item">-->
+<!--              <label class="main-form-fieldset__item-label" for="form__product">Что купить?</label>-->
+<!--              <textarea class="main-form-fieldset__item-field" cols="30" rows="10"></textarea>-->
+<!--            </li>-->
+<!--            <li class="main-form-fieldset__item site-list__item">-->
+<!--              <label class="main-form-fieldset__item-label" for="form__adress">Адрес</label>-->
+<!--              <input class="main-form-fieldset__item-field" type="text" id="form__adress">-->
+<!--            </li>-->
+<!--            <li class="main-form-fieldset__item site-list__item">-->
+<!--              <label class="main-form-fieldset__item-label" for="form__pay">Оплата</label>-->
+<!--              <select class="main-form-fieldset__item-field" id="form__pay">-->
+<!--                <option value="nocash">Безналичная</option>-->
+<!--                <option value="cash">Наличная</option>-->
+<!--              </select>-->
+<!--            </li>-->
+<!--            <li class="main-form-fieldset__item site-list__item">-->
+<!--              <label class="main-form-fieldset__item-label" for="form__personaldata">Принимаю условия обработки персональных данных</label>-->
+<!--              <input class="main-form-fieldset__item-field" type="checkbox" id="form__personaldata">-->
+<!--            </li>-->
+<!--            <li class="main-form-fieldset__item site-list__item">-->
+              <input class="button main-form-fieldset__item-field" type="submit" id="form__submit" value="Отправить">
+<!--            </li>-->
+<!--          </ul>-->
+<!--        </fieldset>-->
       </form>
     </main>
     <footer class="page-footer">
