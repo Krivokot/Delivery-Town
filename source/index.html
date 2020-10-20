@@ -50,34 +50,35 @@
           <ul class="main-form-fieldset__list site-list">
             <li class="main-form-fieldset__item site-list__item">
               <label class="main-form-fieldset__item-label" for="form__name">Имя</label>
-              <input class="main-form-fieldset__item-field" placeholder="Введите имя" type="text" id="form__name">
+              <input class="main-form-fieldset__item-field" required placeholder="Введите имя" type="text" id="form__name">
             </li>
             <li class="main-form-fieldset__item site-list__item">
               <label class="main-form-fieldset__item-label" for="form__phone">Телефон</label>
-              <input class="main-form-fieldset__item-field" placeholder="Введите номер телефона" type="phone" id="form__phone">
+              <input class="main-form-fieldset__item-field" required placeholder="Введите номер телефона" type="phone" id="form__phone">
             </li>
             <li class="main-form-fieldset__item site-list__item">
               <label class="main-form-fieldset__item-label" for="form__shop">Магазин</label>
-              <input class="main-form-fieldset__item-field" placeholder="Введите заведение" type="text" id="form__shop">
+              <input class="main-form-fieldset__item-field" required placeholder="Введите заведение" type="text" id="form__shop">
             </li>
             <li class="main-form-fieldset__item site-list__item">
               <label class="main-form-fieldset__item-label" for="form__product">Что купить?</label>
-              <textarea class="main-form-fieldset__item-field main-form-fieldset__item-field--big" cols="20" rows="10" placeholder="Введите список товаров и количество"></textarea>
+              <textarea class="main-form-fieldset__item-field main-form-fieldset__item-field--big" required cols="20" rows="10" placeholder="Введите список товаров и количество"></textarea>
             </li>
             <li class="main-form-fieldset__item site-list__item">
               <label class="main-form-fieldset__item-label" for="form__adress">Адрес</label>
-              <input class="main-form-fieldset__item-field" placeholder="Введите адрес доставки" type="text" id="form__adress">
+              <input class="main-form-fieldset__item-field" required placeholder="Введите адрес доставки" type="text" id="form__adress">
             </li>
             <li class="main-form-fieldset__item site-list__item">
               <label class="main-form-fieldset__item-label" for="form__pay">Оплата</label>
-              <select class="main-form-fieldset__item-field main-form-fieldset__item-field--pay" id="form__pay">
+              <select class="main-form-fieldset__item-field main-form-fieldset__item-field--pay" required id="form__pay">
                 <option value="nocash">Безналичная</option>
                 <option value="cash">Наличная</option>
               </select>
             </li>
             <li class="main-form-fieldset__item site-list__item">
               <label class="main-form-fieldset__item-label" for="form__personaldata">Принимаю условия обработки персональных данных</label>
-              <input class="main-form-fieldset__item-field main-form-fieldset__item-field--check" type="checkbox" id="form__personaldata">
+              <input class="main-form-fieldset__item-field visually-hidden" required type="checkbox" id="form__personaldata">
+              <span class="main-form__checkbox--indicator"></span>
             </li>
           </ul>
           <input class="buttton main-form-fieldset__item-button" type="submit" id="form__submit" value="Отправить">

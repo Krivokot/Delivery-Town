@@ -99,7 +99,8 @@ gulp.task("server", function () {
     notify: false,
     open: true,
     cors: true,
-    ui: false
+    ui: false,
+    browser: "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
   });
 
   // gulp.watch("build/css/**/*.css", gulp.series("css", "norm"));

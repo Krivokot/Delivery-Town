@@ -5,9 +5,9 @@
 }
 
 .main-form-fieldset {
-    color: #856B8E;
+    color: #856b8e;
     border: none;
-    background-color: #F8F8F8;
+    background-color: #f8f8f8;
     width: 350px;
     border-radius: 28px;
     box-shadow: 3px 3px 4px 0px rgba(#000000, 0.25);
@@ -30,7 +30,7 @@
     &-button {
         border: none;
         border-radius: 60px;
-        background-color: #856B8E;
+        background-color: #856b8e;
         color: white;
         padding: 13px 26px 13px 26px;
     }
@@ -41,12 +41,51 @@
     margin-right: auto;
     margin-left: -25px;
     padding-top: 14px;
+
+    // &--check::before {
+    //     content: "";
+    //     position: absolute;
+    //     right: 155px;
+    //     width: 30px;
+    //     height: 30px;
+    //     border: none;
+    //     border-radius: 7px;
+    //     box-shadow: inset -1px -1px 4px 0px rgba(#856b8e, 0.37);
+    // }
+
+    // &--check:checked::before {
+    //     content: "";
+    //     position: absolute;
+    //     right: 155px;
+    //     width: 30px;
+    //     height: 30px;
+    //     border: none;
+    //     border-radius: 7px;
+    //     box-shadow: inset -1px -1px 4px 0px rgba(#856b8e, 0.37);
+    //     background-image: url(../img/emojione-v1_left-check-mark.svg);
+    //     background-repeat: no-repeat;
+    //     background-position: center center;
+    // }
+}
+
+.main-form-fieldset__item-label input[type="checkbox"] {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 7px;
+        box-shadow: inset -1px -1px 4px 0px rgba(#856b8e, 0.37);
+    }
 }
 
 .main-form-fieldset__item-field {
     border: none;
     border-radius: 13px;
-    box-shadow: inset -1px -1px 4px 0px rgba(#856B8E, 0.37);
+    box-shadow: inset -1px -1px 4px 0px rgba(#856b8e, 0.37);
     margin-right: 10px;
     height: 38px;
 
@@ -58,7 +97,7 @@
     }
 
     &--pay {
-        background-image: url(../image/Rectangle_47.svg);
+        width: 193px;
     }
 
     &--big {
@@ -67,9 +106,5 @@
         &::placeholder {
             padding-top: 10px;
         }
-    }
-
-    &--check {
-        background-image: url(../image/Rectangle_48.svg);
     }
 }

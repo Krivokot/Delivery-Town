@@ -1,12 +1,12 @@
 body {
-  background: url(../img/Group.svg) no-repeat bottom, 
-  url(../img/noto-v1_sun-behind-small-cloud.svg) no-repeat 100% 15%, 
-  url(../img/noto-v1_cloud.svg) no-repeat 0% 14%,
-  url(../img/Vector_16.svg) no-repeat 27% 100%;
+    background: url(../img/Group.svg) no-repeat bottom,
+        url(../img/noto-v1_sun-behind-small-cloud.svg) no-repeat 100% 15%,
+        url(../img/noto-v1_cloud.svg) no-repeat 0% 14%,
+        url(../img/Vector_16.svg) no-repeat 42% 35%;
 }
 
 .page-main {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
