@@ -25,7 +25,7 @@ SECRET_KEY = '!+q3ghxkilh5f(6oa79kh8-t-bvg(1fj5*r5&4a4eke2pawjx$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -120,3 +120,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'mark.petrovich93@yandex.ru'
+EMAIL_HOST_PASSWORD = 'Mk5647382910'
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True

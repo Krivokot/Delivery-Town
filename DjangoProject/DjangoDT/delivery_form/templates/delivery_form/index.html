@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.min.css" />
+{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">#}
     <link rel="preload" href="fonts/bitter-v16-latin-ext_latin_cyrillic-ext_cyrillic-800.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <title>Курьерская служба Delivery Town</title>
   </head>
@@ -19,6 +20,21 @@
         </picture>
       </a>
     </header>
+    {% if messages %}
+        {% for message in messages %}
+
+            {% if message.tags == 'error' %}
+
+                <div class="alert alert-danger" role="alert">{{ message }}</div>
+
+            {% else %}
+
+                <div class="alert alert-{{ message.tags }}" role="alert">{{ message }}</div>
+
+            {% endif %}
+
+        {% endfor %}
+    {% endif %}
     <main class="page-main">
       <section class="price">
         <p class="text-box price-description">
@@ -36,7 +52,7 @@
           </ul>
         </p>
       </section>
-      <form class="main-form" action="{% url 'add_send_form' %}" method="POST">
+      <form class="main-form" action="{% url 'add_send_delivery_form' %}" method="POST">
           {% csrf_token %}
           {{ form.as_p }}
 <!--        <fieldset class="main-form-fieldset">-->
