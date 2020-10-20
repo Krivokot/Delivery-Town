@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.min.css" />
     <link rel="stylesheet" href="./css/normalize.min.css" />
-    <link rel="preload" href="/fonts/bitter-v16-latin-ext_latin_cyrillic-ext_cyrillic-800.woff2" as="font">
+    <!-- <link rel="preload" href="fonts/bitter-v16-latin-ext_latin_cyrillic-ext_cyrillic-800.woff2" as="font"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Курьерская служба Delivery Town</title>
   </head>
   <body>
@@ -15,7 +16,7 @@
         <picture>
           <source media="(min-width: 1440px)" srcset="#">
           <source media="(min-width: 768px)" srcset="#">
-          <img class="page-header__logo-image1" src="img/Logo part 1.svg" width="320.21" height="41.63" alt="Курьерская служба Delivery Town">
+          <img class="page-header__logo-image1" src="img/Logo part 1.svg" alt="Курьерская служба Delivery Town">
         </picture>
         <picture>
           <source media="(min-width: 1440px)" srcset="#">
@@ -44,43 +45,42 @@
       <form class="main-form" method="POST">
         <fieldset class="main-form-fieldset">
           <h2 class="visually-hidden">Форма заказа доставки</h2>
-          <legend class="title main-form-fieldset__label">Закажите доставку</legend>
+          <!-- <legend class="title main-form-fieldset__label">Закажите доставку</legend> -->
+          <h3 class="main-form-fieldset__label">Закажите доставку</h3>
           <ul class="main-form-fieldset__list site-list">
             <li class="main-form-fieldset__item site-list__item">
               <label class="main-form-fieldset__item-label" for="form__name">Имя</label>
-              <input class="main-form-fieldset__item-field" type="text" id="form__name">
+              <input class="main-form-fieldset__item-field" placeholder="Введите имя" type="text" id="form__name">
             </li>
             <li class="main-form-fieldset__item site-list__item">
               <label class="main-form-fieldset__item-label" for="form__phone">Телефон</label>
-              <input class="main-form-fieldset__item-field" type="phone" id="form__phone">
+              <input class="main-form-fieldset__item-field" placeholder="Введите номер телефона" type="phone" id="form__phone">
             </li>
             <li class="main-form-fieldset__item site-list__item">
               <label class="main-form-fieldset__item-label" for="form__shop">Магазин</label>
-              <input class="main-form-fieldset__item-field" type="text" id="form__shop">
+              <input class="main-form-fieldset__item-field" placeholder="Введите заведение" type="text" id="form__shop">
             </li>
             <li class="main-form-fieldset__item site-list__item">
               <label class="main-form-fieldset__item-label" for="form__product">Что купить?</label>
-              <textarea class="main-form-fieldset__item-field" cols="30" rows="10"></textarea>
+              <textarea class="main-form-fieldset__item-field main-form-fieldset__item-field--big" cols="20" rows="10" placeholder="Введите список товаров и количество"></textarea>
             </li>
             <li class="main-form-fieldset__item site-list__item">
               <label class="main-form-fieldset__item-label" for="form__adress">Адрес</label>
-              <input class="main-form-fieldset__item-field" type="text" id="form__adress">
+              <input class="main-form-fieldset__item-field" placeholder="Введите адрес доставки" type="text" id="form__adress">
             </li>
             <li class="main-form-fieldset__item site-list__item">
               <label class="main-form-fieldset__item-label" for="form__pay">Оплата</label>
-              <select class="main-form-fieldset__item-field" id="form__pay">
+              <select class="main-form-fieldset__item-field main-form-fieldset__item-field--pay" id="form__pay">
                 <option value="nocash">Безналичная</option>
                 <option value="cash">Наличная</option>
               </select>
             </li>
             <li class="main-form-fieldset__item site-list__item">
               <label class="main-form-fieldset__item-label" for="form__personaldata">Принимаю условия обработки персональных данных</label>
-              <input class="main-form-fieldset__item-field" type="checkbox" id="form__personaldata">
-            </li>
-            <li class="main-form-fieldset__item site-list__item">
-              <input class="buttton main-form-fieldset__item-field" type="submit" id="form__submit" value="Отправить">
+              <input class="main-form-fieldset__item-field main-form-fieldset__item-field--check" type="checkbox" id="form__personaldata">
             </li>
           </ul>
+          <input class="buttton main-form-fieldset__item-button" type="submit" id="form__submit" value="Отправить">
         </fieldset>
       </form>
     </main>
@@ -92,7 +92,7 @@
             <picture>
               <source media="(min-width: 1440px)" srcset="#"/>
               <source media="(min-width: 768px)" srcset="#"/>
-              <img class="page-footer__social-img page-footer__social-img--vk" src="#" alt="Мы Вконтакте" />
+              <img class="page-footer__social-img page-footer__social-img--vk" src="img/cib_vk.svg" width="32px" height="32px" alt="Мы Вконтакте" />
             </picture>
           </a>
         </li>
@@ -101,7 +101,7 @@
             <picture>
               <source media="(min-width: 1440px)" srcset="#" />
               <source media="(min-width: 768px)" srcset="#" />
-              <img class="page-footer__social-img page-footer__social-img--insta" src="#" alt="Мы в Инстаграм" />
+              <img class="page-footer__social-img page-footer__social-img--insta" src="img/grommet-icons_instagram.svg" width="32px" height="32px" alt="Мы в Инстаграм" />
             </picture>
           </a>
         </li>
@@ -110,7 +110,7 @@
             <picture>
               <source media="(min-width: 1440px)" srcset="#" />
               <source media="(min-width: 768px)" srcset="#" />
-              <img class="page-footer__social-img page-footer__social-img--wa" src="#" alt="Мы в WhatsApp" />
+              <img class="page-footer__social-img page-footer__social-img--wa" src="img/ant-design_whats-app-outlined.svg" width="39px" height="39px" alt="Мы в WhatsApp" />
             </picture>
           </a>
         </li>
@@ -119,7 +119,7 @@
             <picture>
               <source media="(min-width: 1440px)" srcset="#" />
               <source media="(min-width: 768px)" srcset="#" />
-              <img class="page-footer__social-img page-footer__social-img--tg" src="#" alt="Мы в Telegram" />
+              <img class="page-footer__social-img page-footer__social-img--tg" src="img/cib_telegram.svg" width="34px" height="34px" alt="Мы в Telegram" />
             </picture>
           </a>
         </li>
@@ -128,7 +128,7 @@
             <picture>
               <source media="(min-width: 1440px)" srcset="#" />
               <source media="(min-width: 768px)" srcset="#" />
-              <img class="page-footer__social-img page-footer__social-img--vb" src="#" alt="Мы в Viber" />
+              <img class="page-footer__social-img page-footer__social-img--vb" src="img/cib_viber.svg" width="34px" height="34px" alt="Мы в Viber" />
             </picture>
           </a>
         </li>
