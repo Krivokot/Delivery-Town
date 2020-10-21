@@ -4,6 +4,7 @@
     font-family: "Bitter", serif;
     font-weight: bold;
     visibility: hidden;
+    margin-top: -370px;
 }
 
 .main-form--open {
@@ -11,5 +12,19 @@
     justify-content: center;
     font-family: "Bitter", serif;
     font-weight: bold;
+    margin-top: -370px;
+    z-index: 0;
     // visibility: hidden;
+
+    animation: formAnim 0.5s;
+    @keyframes formAnim {
+        from {
+            transform: translate(0px, -300px);
+            opacity: 0;
+        }
+        to {
+            transform: translate(0px, 0px);
+            opacity: 1;
+        }
+    }
 }
