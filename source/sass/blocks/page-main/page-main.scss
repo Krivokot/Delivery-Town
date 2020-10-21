@@ -1,12 +1,110 @@
-body {
-    background: url(../img/Group.svg) no-repeat bottom,
-        url(../img/noto-v1_sun-behind-small-cloud.svg) no-repeat 100% 15%,
-        url(../img/noto-v1_cloud.svg) no-repeat 0% 14%,
-        url(../img/Vector_16.svg) no-repeat 42% 35%;
-}
-
 .page-main {
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
+}
+
+.background-city {
+    display: flex;
+    justify-content: center;
+    &::before {
+        position: fixed;
+        display: block;
+        z-index: -1;
+        content: url(../img/Group.svg);
+        bottom: 30%;
+        left: 0%;
+        width: 50%;
+        height: 50%;
+
+        animation: cityAnim 1s;
+        @keyframes cityAnim {
+            from {
+                transform: translate(0px, 1000px);
+                opacity: 0;
+            }
+            to {
+                transform: translate(0px, 0px);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.background-cloud {
+    display: flex;
+    justify-content: center;
+    &::before {
+        position: absolute;
+        display: block;
+        content: url(../img/noto-v1_cloud.svg);
+        top: 11%;
+        left: 0%;
+
+        animation: cloudAnim 0.5s;
+        animation-delay: 0.7s;
+        animation-fill-mode: backwards;
+        @keyframes cloudAnim {
+            from {
+                transform: translate(-200px, 0px);
+                opacity: 0;
+            }
+            to {
+                transform: translate(0px, 0px);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.background-sun {
+    display: flex;
+    justify-content: center;
+    &::before {
+        position: absolute;
+        display: block;
+        content: url(../img/noto-v1_sun-behind-small-cloud.svg);
+        top: 12%;
+        right: 0%;
+
+        animation: sunAnim 0.5s;
+        animation-delay: 1s;
+        animation-fill-mode: both;
+        @keyframes sunAnim {
+            from {
+                transform: translate(200px, 0px);
+                opacity: 0;
+            }
+            to {
+                transform: translate(0px, 0px);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.background-light {
+    display: flex;
+    justify-content: center;
+    &::before {
+        position: absolute;
+        z-index: -1;
+        display: block;
+        content: url(../img/Vector_16.svg);
+        top: 7%;
+        right: 25%;
+
+        animation: lightAnim 2s;
+        animation-delay: 1.5s;
+        animation-fill-mode: backwards;
+        @keyframes lightAnim {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    }
 }

@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "chrome": "^0.1.0",
+    "jquery": "^3.5.1",
     "set-default-browser": "chrome"
   }
 }

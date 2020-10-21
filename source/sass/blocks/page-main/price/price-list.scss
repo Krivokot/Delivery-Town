@@ -1,0 +1,30 @@
+.price-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+}
+
+.price-list__item {
+    text-align: left;
+    line-height: 40px;
+    display: flex;
+    justify-content: flex-end;
+
+    &-name {
+        width: 220px;
+
+        &--height {
+            line-height: 23px;
+        }
+    }
+
+    &-value {
+        width: 80px;
+        margin-left: 20px;
+    }
+}
+
+.price-list__label {
+    margin-top: 0px;
+}

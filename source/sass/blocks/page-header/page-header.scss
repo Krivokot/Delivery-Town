@@ -1,18 +1,65 @@
 .page-header {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    animation: headAnim 1s;
+    @keyframes headAnim {
+        from {
+            transform: translate(0px, -200px);
+            opacity: 0;
+        }
+        to {
+            transform: translate(0px, 0px);
+            opacity: 1;
+        }
+    }
 }
 
 .page-header__logo-image1 {
-  position: relative;
-  z-index: 2;
-  margin-top: 33px;
-  margin-bottom: -39px;
+    position: relative;
+    z-index: 2;
+    margin-top: 33px;
+    margin-bottom: -39px;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 .page-header__logo-image2 {
-  position: relative;
-  z-index: 1;
-  box-shadow: 3 2 4px 2px rgba(#856b8e, 0.5);
+    position: relative;
+    z-index: 1;
+    box-shadow: 3 2 4px 2px rgba(#856b8e, 0.5);
+}
+
+.page-header__button {
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/eva_arrow-ios-downward-fill.svg);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: center;
+
+    &:active {
+        background: url(../img/eva_arrow-ios-downward-fill.svg) center/30px 30px
+                no-repeat,
+            linear-gradient(
+                0deg,
+                rgba(111, 75, 124, 1) 0%,
+                rgba(116, 88, 126, 1) 17%,
+                rgba(133, 107, 142, 1) 100%
+            );
+    }
+
+    // animation: buttonAnim 1s infinite ease-in-out;
+    // animation-delay: 3s;
+    // @keyframes buttonAnim {
+    //     20%,
+    //     80% {
+    //         transform: translate(10px, 0px);
+    //     }
+    // }
 }

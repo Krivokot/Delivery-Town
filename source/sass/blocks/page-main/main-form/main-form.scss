@@ -1,6 +1,15 @@
 .main-form {
     display: flex;
     justify-content: center;
-    font-family: 'Bitter', serif;
+    font-family: "Bitter", serif;
     font-weight: bold;
+    visibility: hidden;
+}
+
+.main-form--open {
+    display: flex;
+    justify-content: center;
+    font-family: "Bitter", serif;
+    font-weight: bold;
+    // visibility: hidden;
 }

@@ -1,0 +1,29 @@
+.button {
+    border: none;
+    border-radius: 60px;
+    background-color: #856b8e;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #9a6fa8;
+    }
+
+    &:focus {
+        background-color: #9a6fa8;
+        outline: none;
+    }
+
+    &:active {
+        background-color: #9a6fa8;
+        // background: linear-gradient(
+        //     0deg,
+        //     rgba(111, 75, 124, 1) 0%,
+        //     rgba(116, 88, 126, 1) 17%,
+        //     rgba(133, 107, 142, 1) 100%
+        // );
+        border: none;
+        outline: none;
+        color: #e9e8e8;
+    }
+}

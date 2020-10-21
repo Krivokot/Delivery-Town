@@ -93,6 +93,12 @@ return gulp.src("source/*.html")
   .pipe(server.stream());
 })
 
+gulp.task("buildJS", function() {
+    return gulp.src("source/js/*.js")
+      .pipe(gulp.dest("build/js/"))
+      .pipe(server.stream());
+    })
+
 gulp.task("server", function () {
   server.init({
     server: "build/", //source
@@ -109,6 +115,7 @@ gulp.task("server", function () {
 
 gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css", "norm"));
 gulp.watch("source/*.html", gulp.series("buildHTML"));
+gulp.watch("source/js/*.js", gulp.series("buildJS"));
 // gulp.watch("source/*.html").on("change", server.reload);
 
 

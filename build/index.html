@@ -10,6 +10,10 @@
     <title>Курьерская служба Delivery Town</title>
   </head>
   <body>
+      <div class="background-light"></div>
+      <div class="background-city"></div>
+      <div class="background-cloud"></div>
+      <div class="background-sun"></div>
     <header class="page-header">
       <h1 class="visually-hidden">Delivery Town Темрюк</h1>
       <a href="#" class="link page-header__logo">
@@ -24,6 +28,8 @@
           <img class="page-header__logo-image2" src="img/Logo part 2.svg" alt="Курьерская служба Delivery Town">
         </picture>
       </a>
+      <button class="button page-header__button" id="open">
+      </button>
     </header>
     <main class="page-main">
       <section class="price">
@@ -31,13 +37,16 @@
           <ul class="price-list site-list">
             <h2 class="price-list__label">Прайс</h2>
             <li class="price-list__item site-list__item">
-              Темрюк 1 район (от Моста до 10 остановки) - 100 руб.
+              <span class="price-list__item-name price-list__item-name--height">Темрюк 1 район (от Моста до 10 остановки)</span>
+              <span class="price-list__item-value">100 руб.</span>
             </li>
             <li class="price-list__item site-list__item">
-              Темрюк 2 район - 150 руб.
+              <span class="price-list__item-name">Темрюк 2 район</span>
+              <span class="price-list__item-value">150 руб.</span>
             </li>
             <li class="price-list__item site-list__item">
-              Голубицкая, Курчанская - 250 руб.
+                <span class="price-list__item-name">Голубицкая, Курчанская</span>
+                <span class="price-list__item-value">250 руб.</span>
             </li>
           </ul>
         </p>
@@ -76,12 +85,12 @@
               </select>
             </li>
             <li class="main-form-fieldset__item site-list__item">
-              <label class="main-form-fieldset__item-label" for="form__personaldata">Принимаю условия обработки персональных данных</label>
-              <input class="main-form-fieldset__item-field visually-hidden" required type="checkbox" id="form__personaldata">
-              <span class="main-form__checkbox--indicator"></span>
+              <input class="visually-hidden main-form-fieldset__item-field main-form-fieldset__item-field--check" required type="checkbox" id="form__personaldata">
+              <label class="main-form-fieldset__item-label main-form-fieldset__item-label--check" for="form__personaldata">Принимаю условия обработки персональных данных</label>
+              <span class="main-form-fieldset__item-span"></span>
             </li>
           </ul>
-          <input class="buttton main-form-fieldset__item-button" type="submit" id="form__submit" value="Отправить">
+          <input class="button main-form-fieldset__item-button" type="submit" id="form__submit" value="Отправить">
         </fieldset>
       </form>
     </main>
@@ -135,5 +144,7 @@
         </li>
       </ul>
     </footer>
+    <script src="js/index.js">
+    </script>
   </body>
 </html>
