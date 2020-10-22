@@ -11,6 +11,9 @@ class DeliveryForm(models.Model):
     payment = models.ForeignKey('Payment', on_delete=models.PROTECT, verbose_name='Оплата')
     personal_info = models.BooleanField(default=True, verbose_name='Принимаю условия обработки персональных данных ')
 
+    def __str__(self):
+        return f'Заказ № {self.pk}'
+
     def get_absolute_url(self):
         return reverse('add_send_form')
 
