@@ -3,8 +3,22 @@
     justify-content: center;
     font-family: "Bitter", serif;
     font-weight: bold;
-    visibility: hidden;
     margin-top: -370px;
+    visibility: hidden;
+    z-index: 0;
+
+    animation: formAnim 1s;
+    animation-fill-mode: forwards;
+    @keyframes formAnim {
+        from {
+            transform: translate(0px, 1px);
+            opacity: 1;
+        }
+        to {
+            transform: translate(0px, -301px);
+            opacity: 0;
+        }
+    }
 }
 
 .main-form--open {
@@ -16,8 +30,8 @@
     z-index: 0;
     // visibility: hidden;
 
-    animation: formAnim 0.5s;
-    @keyframes formAnim {
+    animation: formOpenAnim 0.5s;
+    @keyframes formOpenAnim {
         from {
             transform: translate(0px, -300px);
             opacity: 0;
@@ -28,3 +42,9 @@
         }
     }
 }
+
+// @media (min-width: $tablet-width) {
+//     .main-form-fieldset {
+//         visibility: visible;
+//     }
+// }

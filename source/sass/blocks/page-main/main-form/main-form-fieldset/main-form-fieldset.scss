@@ -1,7 +1,7 @@
 .main-form-fieldset__label {
     font-size: 23px;
     font-weight: bold;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .main-form-fieldset {
@@ -123,5 +123,12 @@
 
     &--check:focus + .main-form-fieldset__item-label--check::before {
         border: #856b8e 1px solid;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .main-form-fieldset {
+        width: 500px;
+        margin-top: 0px;
     }
 }

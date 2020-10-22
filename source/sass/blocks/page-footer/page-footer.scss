@@ -1,3 +1,7 @@
+.page-footer {
+    border: red 1px solid;
+}
+
 .page-footer__social {
     display: flex;
     background-color: white;
@@ -10,7 +14,7 @@
 
 .page-footer__social-item {
     margin: auto;
-    margin: auto;
+    cursor: pointer;
 }
 
 .page-footer {

@@ -10,6 +10,7 @@
     font-family: "Bitter", serif;
     font-weight: 700;
     box-shadow: 3px 3px 4px 0px rgba(#000000, 0.25);
+    border: red 1px solid;
 
     animation: priceAnim 1s;
     animation-delay: 1.5s;
@@ -23,13 +24,3 @@
         }
     }
 }
-
-// @media (max-width: $tablet-width) {
-//     .price {
-//         position: absolute;
-//         clip: rect(0 0 0 0);
-//         width: 1px;
-//         height: 1px;
-//         margin: -1px;
-//     }
-// }
