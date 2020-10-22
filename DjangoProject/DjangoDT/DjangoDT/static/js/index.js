@@ -13,5 +13,5 @@ button.onclick = function() {
 
 function disable_button()
 {
-    document.getElementById('form__submit').disabled = true;
+    document.querySelector('.main-form-fieldset__item-button').disabled = true;
 }

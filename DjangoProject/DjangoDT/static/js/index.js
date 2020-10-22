@@ -11,4 +11,7 @@ button.onclick = function() {
     }
 };
 
-
+function disable_button()
+{
+    document.querySelector('.main-form-fieldset__item-button').disabled = true;
+}
