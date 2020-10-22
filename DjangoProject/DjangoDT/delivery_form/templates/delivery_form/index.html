@@ -4,97 +4,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.min.css" />
-{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">#}
-    <link rel="preload" href="fonts/bitter-v16-latin-ext_latin_cyrillic-ext_cyrillic-800.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/normalize.min.css' %}" />
+    <!-- <link rel="preload" href="fonts/bitter-v16-latin-ext_latin_cyrillic-ext_cyrillic-800.woff2" as="font"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Курьерская служба Delivery Town</title>
   </head>
   <body>
+      <div class="background-light"></div>
+      <div class="background-city"></div>
+      <div class="background-cloud"></div>
+      <div class="background-sun"></div>
     <header class="page-header">
       <h1 class="visually-hidden">Delivery Town Темрюк</h1>
       <a href="#" class="link page-header__logo">
         <picture>
           <source media="(min-width: 1440px)" srcset="#">
           <source media="(min-width: 768px)" srcset="#">
-          <img class="page-header__logo-image" src="#" alt="Курьерская служба Delivery Town">
+          <img class="page-header__logo-image1" src="{% static 'img/Logo part 1.svg' %}" alt="Курьерская служба Delivery Town">
+        </picture>
+        <picture>
+          <source media="(min-width: 1440px)" srcset="#">
+          <source media="(min-width: 768px)" srcset="#">
+          <img class="page-header__logo-image2" src="{% static 'img/Logo part 2.svg' %}" alt="Курьерская служба Delivery Town">
         </picture>
       </a>
+      <button class="button page-header__button" id="open">
+      </button>
     </header>
-    {% if messages %}
-        {% for message in messages %}
-
-            {% if message.tags == 'error' %}
-
-                <div class="alert alert-danger" role="alert">{{ message }}</div>
-
-            {% else %}
-
-                <div class="alert alert-{{ message.tags }}" role="alert">{{ message }}</div>
-
-            {% endif %}
-
-        {% endfor %}
-    {% endif %}
     <main class="page-main">
       <section class="price">
         <p class="text-box price-description">
           <ul class="price-list site-list">
             <h2 class="price-list__label">Прайс</h2>
             <li class="price-list__item site-list__item">
-              Темрюк 1 район (от Моста до 10 остановки) - 100 руб.
+              <span class="price-list__item-name price-list__item-name--height">Темрюк 1 район (от Моста до 10 остановки)</span>
+              <span class="price-list__item-value">100 руб.</span>
             </li>
             <li class="price-list__item site-list__item">
-              Темрюк 2 район - 150 руб.
+              <span class="price-list__item-name">Темрюк 2 район</span>
+              <span class="price-list__item-value">150 руб.</span>
             </li>
             <li class="price-list__item site-list__item">
-              Голубицкая, Курчанская - 250 руб.
+                <span class="price-list__item-name">Голубицкая, Курчанская</span>
+                <span class="price-list__item-value">250 руб.</span>
             </li>
           </ul>
         </p>
       </section>
-      <form class="main-form" action="{% url 'add_send_delivery_form' %}" method="POST">
-          {% csrf_token %}
-          {{ form.as_p }}
-<!--        <fieldset class="main-form-fieldset">-->
-<!--          <h2 class="visually-hidden">Форма заказа доставки</h2>-->
-<!--          <legend class="title main-form-fieldset__label">Закажите доставку</legend>-->
-<!--          <ul class="main-form-fieldset__list site-list">-->
-<!--            <li class="main-form-fieldset__item site-list__item">-->
-<!--              <label class="main-form-fieldset__item-label" for="form__name">Имя</label>-->
-<!--              <input class="main-form-fieldset__item-field" type="text" id="form__name">-->
-<!--            </li>-->
-<!--            <li class="main-form-fieldset__item site-list__item">-->
-<!--              <label class="main-form-fieldset__item-label" for="form__phone">Телефон</label>-->
-<!--              <input class="main-form-fieldset__item-field" type="phone" id="form__phone">-->
-<!--            </li>-->
-<!--            <li class="main-form-fieldset__item site-list__item">-->
-<!--              <label class="main-form-fieldset__item-label" for="form__shop">Магазин</label>-->
-<!--              <input class="main-form-fieldset__item-field" type="text" id="form__shop">-->
-<!--            </li>-->
-<!--            <li class="main-form-fieldset__item site-list__item">-->
-<!--              <label class="main-form-fieldset__item-label" for="form__product">Что купить?</label>-->
-<!--              <textarea class="main-form-fieldset__item-field" cols="30" rows="10"></textarea>-->
-<!--            </li>-->
-<!--            <li class="main-form-fieldset__item site-list__item">-->
-<!--              <label class="main-form-fieldset__item-label" for="form__adress">Адрес</label>-->
-<!--              <input class="main-form-fieldset__item-field" type="text" id="form__adress">-->
-<!--            </li>-->
-<!--            <li class="main-form-fieldset__item site-list__item">-->
-<!--              <label class="main-form-fieldset__item-label" for="form__pay">Оплата</label>-->
-<!--              <select class="main-form-fieldset__item-field" id="form__pay">-->
-<!--                <option value="nocash">Безналичная</option>-->
-<!--                <option value="cash">Наличная</option>-->
-<!--              </select>-->
-<!--            </li>-->
-<!--            <li class="main-form-fieldset__item site-list__item">-->
-<!--              <label class="main-form-fieldset__item-label" for="form__personaldata">Принимаю условия обработки персональных данных</label>-->
-<!--              <input class="main-form-fieldset__item-field" type="checkbox" id="form__personaldata">-->
-<!--            </li>-->
-<!--            <li class="main-form-fieldset__item site-list__item">-->
-              <input class="button main-form-fieldset__item-field" type="submit" id="form__submit" value="Отправить">
-<!--            </li>-->
-<!--          </ul>-->
-<!--        </fieldset>-->
+      <form action="{% url 'add_send_delivery_form' %}" onsubmit="disable_button()" class="main-form" method="POST">
+        {% csrf_token %}
+        <fieldset class="main-form-fieldset">
+          <h2 class="visually-hidden">Форма заказа доставки</h2>
+          <!-- <legend class="title main-form-fieldset__label">Закажите доставку</legend> -->
+          <h3 class="main-form-fieldset__label">Закажите доставку</h3>
+          <ul class="main-form-fieldset__list site-list">
+            <li class="main-form-fieldset__item site-list__item">
+              <label class="main-form-fieldset__item-label" for="{{ form.name.id_for_label }}">Имя</label>
+              {{form.name}}
+            </li>
+            <li class="main-form-fieldset__item site-list__item">
+              <label class="main-form-fieldset__item-label" for="{{ form.phone.id_for_label }}">Телефон</label>
+              {{form.phone}}
+            </li>
+            <li class="main-form-fieldset__item site-list__item">
+              <label class="main-form-fieldset__item-label" for="{{ form.shop.id_for_label }}">Магазин</label>
+              {{ form.shop }}
+            </li>
+            <li class="main-form-fieldset__item site-list__item">
+              <label class="main-form-fieldset__item-label" for="{{ form.what_buy.id_for_label }}">Что купить?</label>
+              {{ form.what_buy }}
+            </li>
+            <li class="main-form-fieldset__item site-list__item">
+              <label class="main-form-fieldset__item-label" for="{{ form.address.id_for_label }}">Адрес</label>
+              {{ form.address }}
+            </li>
+            <li class="main-form-fieldset__item site-list__item">
+              <label class="main-form-fieldset__item-label" for="{{ form.payment.id_for_label }}">Оплата</label>
+              {{ form.payment }}
+            </li>
+            <li class="main-form-fieldset__item site-list__item">
+              {{ form.personal_info }}
+              <label class="main-form-fieldset__item-label main-form-fieldset__item-label--check" for="{{ form.personal_info.id_for_label }}">Принимаю условия обработки персональных данных</label>
+              <span class="main-form-fieldset__item-span"></span>
+            </li>
+          </ul>
+          <input class="button main-form-fieldset__item-button" type="submit" id="form__submit" value="Отправить">
+        </fieldset>
       </form>
     </main>
     <footer class="page-footer">
@@ -105,7 +101,7 @@
             <picture>
               <source media="(min-width: 1440px)" srcset="#"/>
               <source media="(min-width: 768px)" srcset="#"/>
-              <img class="page-footer__social-img page-footer__social-img--vk" src="#" alt="Мы Вконтакте" />
+              <img class="page-footer__social-img page-footer__social-img--vk" src="{% static 'img/cib_vk.svg' %}" width="32px" height="32px" alt="Мы Вконтакте" />
             </picture>
           </a>
         </li>
@@ -114,7 +110,7 @@
             <picture>
               <source media="(min-width: 1440px)" srcset="#" />
               <source media="(min-width: 768px)" srcset="#" />
-              <img class="page-footer__social-img page-footer__social-img--insta" src="#" alt="Мы в Инстаграм" />
+              <img class="page-footer__social-img page-footer__social-img--insta" src="{% static 'img/grommet-icons_instagram.svg' %}" width="32px" height="32px" alt="Мы в Инстаграм" />
             </picture>
           </a>
         </li>
@@ -123,7 +119,7 @@
             <picture>
               <source media="(min-width: 1440px)" srcset="#" />
               <source media="(min-width: 768px)" srcset="#" />
-              <img class="page-footer__social-img page-footer__social-img--wa" src="#" alt="Мы в WhatsApp" />
+              <img class="page-footer__social-img page-footer__social-img--wa" src="{% static 'img/ant-design_whats-app-outlined.svg' %}" width="39px" height="39px" alt="Мы в WhatsApp" />
             </picture>
           </a>
         </li>
@@ -132,7 +128,7 @@
             <picture>
               <source media="(min-width: 1440px)" srcset="#" />
               <source media="(min-width: 768px)" srcset="#" />
-              <img class="page-footer__social-img page-footer__social-img--tg" src="#" alt="Мы в Telegram" />
+              <img class="page-footer__social-img page-footer__social-img--tg" src="{% static 'img/cib_telegram.svg' %}" width="34px" height="34px" alt="Мы в Telegram" />
             </picture>
           </a>
         </li>
@@ -141,11 +137,13 @@
             <picture>
               <source media="(min-width: 1440px)" srcset="#" />
               <source media="(min-width: 768px)" srcset="#" />
-              <img class="page-footer__social-img page-footer__social-img--vb" src="#" alt="Мы в Viber" />
+              <img class="page-footer__social-img page-footer__social-img--vb" src="{% static 'img/cib_viber.svg' %}" width="34px" height="34px" alt="Мы в Viber" />
             </picture>
           </a>
         </li>
       </ul>
     </footer>
+    <script src="{% static 'js/index.js' %}">
+    </script>
   </body>
 </html>
