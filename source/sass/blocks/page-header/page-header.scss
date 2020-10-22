@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: red 1px solid;
 
     animation: headAnim 1s;
     @keyframes headAnim {
@@ -24,7 +23,6 @@
     margin-left: 38px;
     margin-top: 33px;
     margin-bottom: -38px;
-    border: red 1px solid;
 
     &:focus {
         outline: none;
@@ -36,7 +34,6 @@
     position: relative;
     z-index: -1;
     box-shadow: 3 2 4px 2px rgba(#856b8e, 0.5);
-    border: red 1px solid;
 }
 
 .page-header__button {
@@ -69,5 +66,13 @@
 
     .page-header__button {
         display: none;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .page-header__logo-image1 {
+        margin-left: 78px;
+        margin-top: 33px;
+        margin-bottom: -73px;
     }
 }

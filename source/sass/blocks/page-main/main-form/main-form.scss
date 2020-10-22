@@ -11,11 +11,11 @@
     animation-fill-mode: forwards;
     @keyframes formAnim {
         from {
-            transform: translate(0px, 1px);
+            transform: translate(0px, 0px);
             opacity: 1;
         }
         to {
-            transform: translate(0px, -301px);
+            transform: translate(0px, -300px);
             opacity: 0;
         }
     }
@@ -28,7 +28,6 @@
     font-weight: bold;
     margin-top: -370px;
     z-index: 0;
-    // visibility: hidden;
 
     animation: formOpenAnim 0.5s;
     @keyframes formOpenAnim {
@@ -44,7 +43,8 @@
 }
 
 // @media (min-width: $tablet-width) {
-//     .main-form-fieldset {
-//         visibility: visible;
+//     .main-form--open {
+//         animation-delay: 1s;
+//         animation-fill-mode: backwards;
 //     }
 // }

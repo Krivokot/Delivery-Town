@@ -129,6 +129,59 @@
 @media (min-width: $tablet-width) {
     .main-form-fieldset {
         width: 500px;
-        margin-top: 0px;
+        margin-top: -60px;
+    }
+
+    .main-form-fieldset__label {
+        margin-top: 60px;
+    }
+
+    .main-form-fieldset__list {
+        width: 450px;
+    }
+
+    .main-form-fieldset__item-field {
+        width: 300px;
+    }
+
+    .main-form-fieldset__item-label {
+        width: 250px;
+
+        &--check::before {
+            top: 7px;
+            right: -217px;
+        }
+
+        &--check::after {
+            top: 7px;
+            right: -217px;
+        }
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .main-form-fieldset {
+        width: 580px;
+        margin-top: -80px;
+    }
+
+    .main-form-fieldset__list {
+        width: 520px;
+    }
+
+    .main-form-fieldset__item-field {
+        width: 480px;
+    }
+
+    .main-form-fieldset__item-label {
+        width: 250px;
+
+        &--check::before {
+            right: -287px;
+        }
+
+        &--check::after {
+            right: -287px;
+        }
     }
 }

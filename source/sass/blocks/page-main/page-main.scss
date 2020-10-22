@@ -115,16 +115,35 @@
         bottom: -25px;
         left: -40px;
     }
+
+    .background-light {
+        display: none;
+    }
 }
 
 @media (min-width: $desktop-width) {
     .background-city::after {
         position: fixed;
         z-index: -3;
-        content: url(../img/Group.svg);
+        content: url(../img/Group_after.svg);
         bottom: -25px;
         left: 1400px;
-        transform: scale(-1, 1);
+
+        animation: cityAnim 1s;
+        @keyframes cityAnim {
+            from {
+                transform: translate(0px, 1000px);
+                opacity: 0;
+            }
+            to {
+                transform: translate(0px, 0px);
+                opacity: 1;
+            }
+        }
+    }
+
+    .background-light {
+        display: none;
     }
 }
 
