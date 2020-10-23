@@ -1,5 +1,16 @@
 let form = document.querySelector('.main-form');
 let button = document.querySelector('.page-header__button');
+// document.querySelector(".main-form").style.animationPlayState = "play";
+if (window.matchMedia('(min-width: 768px)').matches) {
+    form.classList.remove('main-form');
+    form.classList.add('main-form--open');
+};
+
+if (window.matchMedia('(min-width: 768px)').matches) {
+    form.style.animationDelay = "1s";
+    form.style.animationFillMode = "backwards";
+};
+
 
 button.onclick = function() {
     if (form.className == 'main-form') {
@@ -8,10 +19,12 @@ button.onclick = function() {
     } else {
         form.classList.remove('main-form--open');
         form.classList.add('main-form');
+        document.querySelector(".main-form").style.visibility = "visible";
     }
 };
+
 
 function disable_button()
 {
     document.querySelector('.main-form-fieldset__item-button').disabled = true;
-}
+};
