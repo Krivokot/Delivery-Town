@@ -11,28 +11,28 @@
     <title>Курьерская служба Delivery Town</title>
   </head>
   <body>
-      <div class="background-light"></div>
       <div class="background-city"></div>
       <div class="background-cloud"></div>
       <div class="background-sun"></div>
-    <header class="page-header">
+    <header class="wrapper page-header">
       <h1 class="visually-hidden">Delivery Town Темрюк</h1>
       <a href="#" class="link page-header__logo">
         <picture>
-          <source media="(min-width: 1440px)" srcset="#">
-          <source media="(min-width: 768px)" srcset="#">
+          <source media="(min-width: 1440px)" srcset="{% static 'img/Group_1-desktop.svg' %}">
+          <source media="(min-width: 768px)" srcset="{% static 'img/Group_1.svg' %}">
           <img class="page-header__logo-image1" src="{% static 'img/Logo part 1.svg' %}" alt="Курьерская служба Delivery Town">
         </picture>
         <picture>
-          <source media="(min-width: 1440px)" srcset="#">
-          <source media="(min-width: 768px)" srcset="#">
+          <source media="(min-width: 1440px)" srcset="{% static 'img/Group_2-desktop.svg' %}">
+          <source media="(min-width: 768px)" srcset="{% static 'img/Group_2.svg' %}">
           <img class="page-header__logo-image2" src="{% static 'img/Logo part 2.svg' %}" alt="Курьерская служба Delivery Town">
         </picture>
       </a>
       <button class="button page-header__button" id="open">
       </button>
+      <div class="background-light"></div>
     </header>
-    <main class="page-main">
+    <main class="wrapper page-main">
       <section class="price">
         <p class="text-box price-description">
           <ul class="price-list site-list">
@@ -93,14 +93,14 @@
         </fieldset>
       </form>
     </main>
-    <footer class="page-footer">
+    <footer class="wrapper page-footer">
       <ul class="page-footer__social site-list">
         <h2 class="visually-hidden">Как с нами связаться</h2>
         <li class="page-footer__social-item site-list__item">
           <a class="link page-footer__social-link page-footer__social-link--vk" href="https://vk.com/delivery_town">
             <picture>
-              <source media="(min-width: 1440px)" srcset="#"/>
-              <source media="(min-width: 768px)" srcset="#"/>
+              <source media="(min-width: 1440px)" srcset="{% static 'img/cib_vk.svg' %}"/>
+              <source media="(min-width: 768px)" srcset="{% static 'img/cib_vk.svg' %}"/>
               <img class="page-footer__social-img page-footer__social-img--vk" src="{% static 'img/cib_vk.svg' %}" width="32px" height="32px" alt="Мы Вконтакте" />
             </picture>
           </a>
@@ -108,8 +108,8 @@
         <li class="page-footer__social-item site-list__item">
           <a class="link page-footer__social-link page-footer__social-link--inst" href="https://www.instagram.com/delivery_town_23/">
             <picture>
-              <source media="(min-width: 1440px)" srcset="#" />
-              <source media="(min-width: 768px)" srcset="#" />
+              <source media="(min-width: 1440px)" srcset="{% static 'img/grommet-icons_instagram.svg' %}" />
+              <source media="(min-width: 768px)" srcset="{% static 'img/grommet-icons_instagram.svg' %}" />
               <img class="page-footer__social-img page-footer__social-img--insta" src="{% static 'img/grommet-icons_instagram.svg' %}" width="32px" height="32px" alt="Мы в Инстаграм" />
             </picture>
           </a>
@@ -117,8 +117,8 @@
         <li class="page-footer__social-item site-list__item">
           <a class="link page-footer__social-link page-footer__social-link--wa" href="https://wa.me/79024071054">
             <picture>
-              <source media="(min-width: 1440px)" srcset="#" />
-              <source media="(min-width: 768px)" srcset="#" />
+              <source media="(min-width: 1440px)" srcset="{% static 'img/ant-design_whats-app-outlined.svg' %}" />
+              <source media="(min-width: 768px)" srcset="{% static 'img/ant-design_whats-app-outlined.svg' %}" />
               <img class="page-footer__social-img page-footer__social-img--wa" src="{% static 'img/ant-design_whats-app-outlined.svg' %}" width="39px" height="39px" alt="Мы в WhatsApp" />
             </picture>
           </a>
@@ -126,8 +126,8 @@
         <li class="page-footer__social-item site-list__item">
           <a class="link page-footer__social-link page-footer__social-link--tg" href="https://t.me/Delivery_town">
             <picture>
-              <source media="(min-width: 1440px)" srcset="#" />
-              <source media="(min-width: 768px)" srcset="#" />
+              <source media="(min-width: 1440px)" srcset="{% static 'img/cib_telegram.svg' %}" />
+              <source media="(min-width: 768px)" srcset="{% static 'img/cib_telegram.svg' %}" />
               <img class="page-footer__social-img page-footer__social-img--tg" src="{% static 'img/cib_telegram.svg' %}" width="34px" height="34px" alt="Мы в Telegram" />
             </picture>
           </a>
@@ -135,8 +135,8 @@
         <li class="page-footer__social-item site-list__item">
           <a class="link page-footer__social-link page-footer__social-link--vb" href=viber://add?number=79024071054">
             <picture>
-              <source media="(min-width: 1440px)" srcset="#" />
-              <source media="(min-width: 768px)" srcset="#" />
+              <source media="(min-width: 1440px)" srcset="{% static 'img/cib_viber.svg' %}" />
+              <source media="(min-width: 768px)" srcset="{% static 'img/cib_viber.svg' %}" />
               <img class="page-footer__social-img page-footer__social-img--vb" src="{% static 'img/cib_viber.svg' %}" width="34px" height="34px" alt="Мы в Viber" />
             </picture>
           </a>
