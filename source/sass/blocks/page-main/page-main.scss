@@ -150,7 +150,7 @@ body {
             left: 1440px;
             top: 409px;
 
-            animation: cityAnim 1s;
+            animation: cityAnim 0.4s;
             @keyframes cityAnim {
                 from {
                     transform: translate(0px, 1000px);

@@ -1,5 +1,6 @@
 let form = document.querySelector('.main-form');
 let button = document.querySelector('.page-header__button');
+let submit = document.querySelector('.main-form-fieldset__item-button');
 // document.querySelector(".main-form").style.animationPlayState = "play";
 if (window.matchMedia('(min-width: 768px)').matches) {
     form.classList.remove('main-form');
@@ -19,5 +20,10 @@ button.onclick = function() {
         document.querySelector(".main-form").style.visibility = "visible";
     }
 };
+
+submit.onclick = function() {
+    submit.disabled=true;
+};
+
 
 
