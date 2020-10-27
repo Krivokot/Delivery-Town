@@ -8,7 +8,6 @@
     z-index: 0;
 
     animation: formAnim 1s;
-    animation-fill-mode: forwards;
     @keyframes formAnim {
         from {
             transform: translate(0px, 0px);
