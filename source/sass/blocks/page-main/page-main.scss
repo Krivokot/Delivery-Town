@@ -148,10 +148,10 @@ body {
             z-index: -3;
             content: url(../img/Group_after.svg);
             left: 1440px;
-            top: 409px;
+            // top: 409px;
 
-            animation: cityAnim 0.4s;
-            @keyframes cityAnim {
+            animation: cityAfterAnim 0.4s;
+            @keyframes cityAfterAnim {
                 from {
                     transform: translate(0px, 1000px);
                     opacity: 0;
