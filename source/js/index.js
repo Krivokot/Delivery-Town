@@ -33,9 +33,10 @@ function loop() {
         .delay(3000)
         .animate({marginLeft: '+=20px'}, 100)
         .animate({marginRight: '+=40px'}, 100)
-        .animate({marginRight: '-=20px'}, 100, function () {
+        .animate({marginRight: '-=20px'}, 100,
+        function () {
             loop();
-    })
-}
+        })
+};
 
 loop();

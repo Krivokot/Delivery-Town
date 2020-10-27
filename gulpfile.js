@@ -13,6 +13,7 @@ var imagemin = require("gulp-imagemin");
 var del = require("del");
 var imagedel = require("del");
 var autoImports = require("gulp-auto-imports");
+var uglify = require("gulp-uglify");
 
 gulp.task("del", function(){
   return del("build");
@@ -23,7 +24,6 @@ gulp.task("copy", function(){
     "source/*.html",
     "source/fonts/**/*.woff2",
     "source/img/**",
-    "source/js/**",
     "source/*.ico"
   ], {
     base: "source"
@@ -95,8 +95,10 @@ return gulp.src("source/*.html")
 
 gulp.task("buildJS", function() {
     return gulp.src("source/js/*.js")
-      .pipe(gulp.dest("build/js/"))
-      .pipe(server.stream());
+    .pipe(uglify())
+    .pipe(rename("index.min.js"))
+    .pipe(gulp.dest("build/js/"))
+    .pipe(server.stream());
     })
 
 gulp.task("server", function () {
@@ -119,5 +121,5 @@ gulp.watch("source/js/*.js", gulp.series("buildJS"));
 // gulp.watch("source/*.html").on("change", server.reload);
 
 
-gulp.task("build", gulp.series("del", "copy", "images","sass:load", "css", "norm"))
+gulp.task("build", gulp.series("del", "copy", "images","sass:load", "css", "buildJS", "norm"))
 gulp.task("start", gulp.series("build", "server"));
