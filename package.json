@@ -30,7 +30,8 @@
     "gulp-postcss": "8.0.x",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "4.0.x",
-    "gulp-sourcemaps": "2.6.x"
+    "gulp-sourcemaps": "2.6.x",
+    "gulp-uglify": "^3.0.2"
   },
   "browserslist": [
     "last 2 versions",
