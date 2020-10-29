@@ -1,5 +1,5 @@
 from django.contrib import messages
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMessage
 from django.shortcuts import render, redirect
 from .forms import DeliveryFormForm
 from .models import DeliveryForm
@@ -16,7 +16,7 @@ def add_sent_delivery_form(request):
                                f'Адрес: {form.cleaned_data["address"]}\n' \
                                f'Вид оплаты: {form.cleaned_data["payment"]}\n'
             mail = send_mail('Форма заказа Delivery town', text_for_message, 'delivery_town@mail.ru',
-                             ['marchell93@mail.ru', 'krivokot186@yandex.ru'], fail_silently=True)
+                             ['marchell93@mail.ru', 'krivokot186@yandex.ru'], fail_silently=False)
             print(mail)
             DeliveryForm.objects.create(**form.cleaned_data)
             return redirect('add_send_delivery_form')
