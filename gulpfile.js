@@ -14,6 +14,9 @@ var del = require("del");
 var imagedel = require("del");
 var autoImports = require("gulp-auto-imports");
 var uglify = require("gulp-uglify");
+var gulp = require("gulp");
+var gutil = require("gulp-util");
+var ftp = require("vinyl-ftp");
 
 gulp.task("del", function(){
   return del("build");
@@ -123,3 +126,26 @@ gulp.watch("source/js/*.js", gulp.series("buildJS"));
 
 gulp.task("build", gulp.series("del", "copy", "images","sass:load", "css", "buildJS", "norm"))
 gulp.task("start", gulp.series("build", "server"));
+
+gulp.task( 'deploy', function () {
+
+    var conn = ftp.create( {
+        host:     'vh316.timeweb.ru',
+        user:     'cm58108',
+        password: 'NyuwV8MsPOe0',
+        parallel: 10,
+        log:      gutil.log
+    } );
+
+    var globs = [
+        'build/**'
+    ];
+
+    // using base = '.' will transfer everything to /public_html correctly
+    // turn off buffering in gulp.src for best performance
+
+    return gulp.src( globs, {buffer: false } )
+        // .pipe( conn.newer( '/public_html' ) ) // only upload newer files
+        .pipe( conn.dest( '/public_html/public_html/' ) );
+
+} );
