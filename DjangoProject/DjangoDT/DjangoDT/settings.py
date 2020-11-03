@@ -126,9 +126,10 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'DjangoDT/static')
 ]
 
+DEFAULT_FROM_EMAIL = 'delivery_town@mail.ru'
 EMAIL_HOST = 'smtp.mail.ru'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'delivery_town@mail.ru'
-EMAIL_HOST_PASSWORD = 'AOBrIptya33*'
+EMAIL_HOST_PASSWORD = 'YyJeTaR5tn2%'
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
