@@ -41,9 +41,8 @@
     }
 }
 
-// @media (min-width: $tablet-width) {
-//     .main-form--open {
-//         animation-delay: 1s;
-//         animation-fill-mode: backwards;
-//     }
-// }
+@media (min-width: $tablet-width) {
+    .main-form--open {
+        margin-top: -1010px;
+    }
+}
