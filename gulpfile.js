@@ -130,9 +130,9 @@ gulp.task("start", gulp.series("build", "server"));
 gulp.task( 'deploy', function () {
 
     var conn = ftp.create( {
-        host:     'vh316.timeweb.ru',
-        user:     'cm58108',
-        password: 'NyuwV8MsPOe0',
+        host:     'server96.hosting.reg.ru',
+        user:     'u1198419',
+        password: 'cPp_O7Q6',
         parallel: 10,
         log:      gutil.log
     } );
@@ -146,6 +146,6 @@ gulp.task( 'deploy', function () {
 
     return gulp.src( globs, {buffer: false } )
         // .pipe( conn.newer( '/public_html' ) ) // only upload newer files
-        .pipe( conn.dest( '/public_html/public_html/' ) );
+        .pipe( conn.dest( '/www/delivery-town.ru' ) );
 
 } );

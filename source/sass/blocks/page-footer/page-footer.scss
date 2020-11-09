@@ -1,3 +1,9 @@
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .page-footer__social {
     display: flex;
     background-color: white;
@@ -5,7 +11,7 @@
     width: 260px;
     height: 72px;
     padding: 5px 5px 0px 5px;
-    margin-bottom: 35px;
+    margin-top: 100px;
     box-shadow: 3px 3px 4px 0px rgba(#000000, 0.25);
 }
 
@@ -18,4 +24,12 @@
     display: flex;
     justify-content: center;
     margin-top: 48px;
+}
+
+@media (min-width: $tablet-width) {
+    .page-footer {
+        margin-top: 300px;
+        display: flex;
+        flex-direction: column;
+    }
 }

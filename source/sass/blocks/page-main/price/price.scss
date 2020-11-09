@@ -23,3 +23,9 @@
         }
     }
 }
+
+@media (min-width: $tablet-width) {
+    .price {
+        margin-top: 830px;
+    }
+}
