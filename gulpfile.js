@@ -27,7 +27,8 @@ gulp.task("copy", function(){
     "source/*.html",
     "source/fonts/**/*.woff2",
     "source/img/**",
-    "source/*.ico"
+    "source/*.ico",
+    "source/js/*.js"
   ], {
     base: "source"
   })
@@ -124,7 +125,7 @@ gulp.watch("source/js/*.js", gulp.series("buildJS"));
 // gulp.watch("source/*.html").on("change", server.reload);
 
 
-gulp.task("build", gulp.series("del", "copy", "images","sass:load", "css", "buildJS", "norm"))
+gulp.task("build", gulp.series("del", "copy", "images","sass:load", "css", "norm"))
 gulp.task("start", gulp.series("build", "server"));
 
 gulp.task( 'deploy', function () {
