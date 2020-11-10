@@ -15,7 +15,7 @@ class DeliveryForm(models.Model):
         return f'Заказ № {self.pk}'
 
     def get_absolute_url(self):
-        return reverse('add_send_form')
+        return reverse('add_send_delivery_form')
 
 
 class Payment(models.Model):
