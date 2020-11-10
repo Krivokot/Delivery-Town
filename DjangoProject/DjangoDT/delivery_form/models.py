@@ -14,9 +14,6 @@ class DeliveryForm(models.Model):
     def __str__(self):
         return f'Заказ № {self.pk}'
 
-    def get_absolute_url(self):
-        return reverse('add_send_delivery_form')
-
 
 class Payment(models.Model):
     pay_type = models.CharField(max_length=50, db_index=True, verbose_name='Тип оплаты')

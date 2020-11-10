@@ -5,7 +5,7 @@ from .forms import DeliveryFormForm
 from .models import DeliveryForm
 
 
-def add_sent_delivery_form(request):
+def add_send_delivery_form(request):
     if request.method == 'POST':
         form = DeliveryFormForm(request.POST)
         if form.is_valid():
