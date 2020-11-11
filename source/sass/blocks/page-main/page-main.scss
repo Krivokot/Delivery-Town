@@ -1,6 +1,25 @@
+@font-face {
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 400;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Bitter"), url("/fonts/Bitter.woff2") format("woff2"),
+        url("/fonts/Bitter.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Bitter";
+    font-style: bold;
+    font-weight: 700;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Bitter"), url("/fonts/Bitterbold.woff2") format("woff2"),
+        url("/fonts/Bitterbold.woff") format("woff");
+}
+
 body {
     overflow-x: hidden;
     font-family: "Bitter", serif;
+    font-weight: 700;
 }
 
 .page-main {
@@ -107,7 +126,7 @@ body {
         position: absolute;
         z-index: -4;
         content: url(../img/Vector_16.svg);
-        top: 70px;
+        top: 68px;
 
         animation: lightAnim 2s;
         animation-delay: 1.5s;

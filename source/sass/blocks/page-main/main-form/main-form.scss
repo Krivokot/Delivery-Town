@@ -1,8 +1,6 @@
 .main-form {
     display: flex;
     justify-content: center;
-    font-family: "Bitter", serif;
-    font-weight: bold;
     margin-top: -430px;
     visibility: hidden;
     z-index: 0;
@@ -23,8 +21,6 @@
 .main-form--open {
     display: flex;
     justify-content: center;
-    font-family: "Bitter", serif;
-    font-weight: bold;
     margin-top: -430px;
     z-index: 0;
 

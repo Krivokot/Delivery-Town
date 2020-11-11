@@ -1,6 +1,5 @@
 .main-form-fieldset__label {
     font-size: 23px;
-    font-weight: bold;
     margin-bottom: 30px;
 }
 
@@ -100,8 +99,8 @@
     }
 
     &::placeholder {
+        font-family: "Arial", serif;
         font-style: italic;
-        font-weight: regular;
         font-size: 12px;
         padding-left: 10px;
     }
@@ -149,16 +148,16 @@
     }
 
     .main-form-fieldset__item-label {
-        width: 250px;
+        width: 270px;
 
         &--check::before {
             top: 7px;
-            right: -217px;
+            right: -195px;
         }
 
         &--check::after {
             top: 7px;
-            right: -217px;
+            right: -195px;
         }
     }
 }
@@ -178,14 +177,14 @@
     }
 
     .main-form-fieldset__item-label {
-        width: 250px;
+        width: 300px;
 
         &--check::before {
-            right: -287px;
+            right: -235px;
         }
 
         &--check::after {
-            right: -287px;
+            right: -235px;
         }
     }
 }
