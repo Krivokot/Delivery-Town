@@ -15,8 +15,7 @@ def add_send_delivery_form(request):
                                f'Что купить: {form.cleaned_data["what_buy"]}\n' \
                                f'Адрес: {form.cleaned_data["address"]}\n' \
                                f'Вид оплаты: {form.cleaned_data["payment"]}\n'
-            send_mail('Форма заказа Delivery town', text_for_message, 'marchellopatrioti@gmail.com',
-                      ['marchell93@mail.ru', 'krivokot186@yandex.ru'], fail_silently=False)
+            send_mail('Форма заказа Delivery town', text_for_message, 'marchellopatrioti@gmail.com', ['marchell93@mail.ru', 'krivokot186@yandex.ru'], fail_silently=False)
             DeliveryForm.objects.create(**form.cleaned_data)
             return redirect('add_send_delivery_form')
         else:
