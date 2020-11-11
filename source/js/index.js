@@ -24,10 +24,12 @@ button.onclick = function() {
     }
 };
 
+// function disableSubmit() {
+//     submit.disabled=true;
+// }
+
 function disableSubmit() {
-    submit.onsubmit = function() {
-        submit.disabled=true;
-    }
+    submit.disabled=true;
 }
 
 

@@ -99,8 +99,8 @@ return gulp.src("source/*.html")
 
 gulp.task("buildJS", function() {
     return gulp.src("source/js/*.js")
-    .pipe(uglify())
-    .pipe(rename("index.min.js"))
+    // .pipe(uglify())
+    // .pipe(rename("index.min.js"))
     .pipe(gulp.dest("build/js/"))
     .pipe(server.stream());
     })
