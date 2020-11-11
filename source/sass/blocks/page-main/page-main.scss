@@ -170,17 +170,17 @@ body {
             left: 1440px;
             // top: 409px;
 
-            animation: cityAfterAnim 0.4s;
-            @keyframes cityAfterAnim {
-                from {
-                    transform: translate(0px, 1000px);
-                    opacity: 0;
-                }
-                to {
-                    transform: translate(0px, 0px);
-                    opacity: 1;
-                }
-            }
+            // animation: cityAfterAnim 0s;
+            // @keyframes cityAfterAnim {
+            //     from {
+            //         transform: translate(0px, 1000px);
+            //         opacity: 0;
+            //     }
+            //     to {
+            //         transform: translate(0px, 0px);
+            //         opacity: 1;
+            //     }
+            // }
         }
     }
 
