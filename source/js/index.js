@@ -24,9 +24,12 @@ button.onclick = function() {
     }
 };
 
-submit.onsubmit = function() {
-    submit.disabled=true;
-};
+function disableSubmit() {
+    submit.onsubmit = function() {
+        submit.disabled=true;
+    }
+}
+
 
 function loop() {
     $(button)
