@@ -19,7 +19,7 @@
 .page-header__logo-image1 {
     display: flex;
     position: relative;
-    z-index: 1;
+    z-index: 4;
     margin-left: 46px;
     margin-top: 33px;
     margin-bottom: -28px;
@@ -33,7 +33,7 @@
 .page-header__logo-image2 {
     display: flex;
     position: relative;
-    z-index: -1;
+    z-index: 2;
 }
 
 .page-header__button {
@@ -43,7 +43,6 @@
     background-repeat: no-repeat;
     background-size: 30px 30px;
     background-position: center;
-    z-index: 1;
 
     &:active {
         background: url(../img/eva_arrow-ios-downward-fill.svg) center/30px 30px
