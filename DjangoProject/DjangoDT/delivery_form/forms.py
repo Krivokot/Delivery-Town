@@ -25,6 +25,7 @@ class DeliveryFormForm(forms.ModelForm):
                 attrs={'class': 'main-form-fieldset__item-field main-form-fieldset__item-field--pay',
                        'placeholder': 'Введите адрес доставки'}),
             'personal_info': forms.CheckboxInput(attrs={'class': 'visually-hidden main-form-fieldset__item-field '
-                                                                 'main-form-fieldset__item-field--check'})
+                                                                 'main-form-fieldset__item-field--check',
+                                                        'required': True})
 
         }

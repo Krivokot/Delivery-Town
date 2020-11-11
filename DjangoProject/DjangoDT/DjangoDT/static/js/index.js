@@ -24,8 +24,9 @@ button.onclick = function() {
     }
 };
 
-submit.onsubmit = function() {
-    submit.disabled=true;
+function disable_button()
+{
+    document.querySelector('.main-form-fieldset__item-button').disabled = true;
 };
 
 function loop() {
@@ -40,3 +41,4 @@ function loop() {
 };
 
 loop();
+

@@ -79,7 +79,7 @@
           </ul>
         </p>
       </section>
-      <form action="{% url 'add_send_delivery_form' %}" class="main-form" method="POST">
+      <form action="{% url 'add_send_delivery_form' %}" onsubmit="disable_button()" class="main-form" method="POST">
         {% csrf_token %}
         <fieldset class="main-form-fieldset">
           <h2 class="visually-hidden">Форма заказа доставки</h2>
