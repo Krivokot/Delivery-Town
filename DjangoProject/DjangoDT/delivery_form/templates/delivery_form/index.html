@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="{% static 'css/style.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/normalize.min.css' %}" />
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
-    <!-- <link rel="preload" href="fonts/bitter-v16-latin-ext_latin_cyrillic-ext_cyrillic-800.woff2" as="font"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+    <link rel="preload" href="{% static 'fonts/Bitter.woff2' %}" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="{% static 'fonts/Bitter.woff' %}" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="{% static 'fonts/Bitterbold.woff2' %}" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="{% static 'fonts/Bitterbold.woff' %}" as="font" type="font/woff" crossorigin="anonymous">
     <title>Курьерская служба Delivery Town</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-182575343-1">
@@ -79,7 +82,7 @@
           </ul>
         </p>
       </section>
-      <form action="{% url 'add_send_delivery_form' %}" onsubmit="disable_button()" class="main-form" method="POST">
+      <form action="{% url 'add_send_delivery_form' %}" onsubmit="disableSubmit()" class="main-form" method="POST">
         {% csrf_token %}
         <fieldset class="main-form-fieldset">
           <h2 class="visually-hidden">Форма заказа доставки</h2>
