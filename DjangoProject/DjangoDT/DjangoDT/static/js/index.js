@@ -24,7 +24,7 @@ button.onclick = function() {
     }
 };
 
-submit.onclick = function() {
+submit.onsubmit = function() {
     submit.disabled=true;
 };
 
