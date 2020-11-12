@@ -3,8 +3,8 @@
     font-style: normal;
     font-weight: 400;
     /* Браузер сначала попробует найти шрифт локально */
-    src: local("Bitter"), url("/fonts/Bitter.woff2") format("woff2"),
-        url("/fonts/Bitter.woff") format("woff");
+    src: local("Bitter"), url("../fonts/Bitter.woff2") format("woff2"),
+        url("../fonts/Bitter.woff") format("woff");
 }
 
 @font-face {
@@ -12,8 +12,8 @@
     font-style: bold;
     font-weight: 700;
     /* Браузер сначала попробует найти шрифт локально */
-    src: local("Bitter"), url("/fonts/Bitterbold.woff2") format("woff2"),
-        url("/fonts/Bitterbold.woff") format("woff");
+    src: local("Bitter"), url("../fonts/Bitterbold.woff2") format("woff2"),
+        url("../fonts/Bitterbold.woff") format("woff");
 }
 
 body {
