@@ -4,6 +4,7 @@ from django.db import models
 
 class DeliveryForm(models.Model):
     created_at = models.DateTimeField(default=timezone.now, editable=True, verbose_name='Дата и время заказа')
+    number = models.IntegerField(verbose_name='Номер заказа', default=0)
     name = models.CharField(max_length=150, verbose_name='Имя')
     phone = models.CharField(max_length=50, verbose_name='Телефон')
     shop = models.CharField(max_length=250, verbose_name='Магазин')
@@ -14,7 +15,7 @@ class DeliveryForm(models.Model):
     price = models.CharField(max_length=5, verbose_name='Цена')
 
     def __str__(self):
-        return f'Заказ № {self.pk}'
+        return f'Заказ № {self.number}'
 
 
 class Payment(models.Model):
