@@ -10,8 +10,8 @@ class DeliveryFormResource(resources.ModelResource):
 
 
 class DeliveryFormAdmin(ImportExportModelAdmin):
-    list_display = ('number', 'created_at', 'name', 'phone', 'payment', 'price')
-    list_display_links = ('number', 'created_at', 'name')
+    list_display = ('number', 'date_add', 'name', 'phone', 'payment', 'price')
+    list_display_links = ('number', 'date_add', 'name')
     resource_class = DeliveryFormResource
 
 
