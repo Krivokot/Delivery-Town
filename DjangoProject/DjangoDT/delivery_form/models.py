@@ -13,8 +13,9 @@ class DeliveryForm(models.Model):
     what_buy = models.TextField(blank=True, verbose_name='Что купить?')
     address = models.CharField(max_length=500, verbose_name='Адрес')
     payment = models.ForeignKey('Payment', on_delete=models.PROTECT, verbose_name='Оплата')
-    personal_info = models.BooleanField(default=True,  verbose_name='Принимаю условия обработки персональных данных ')
+    personal_info = models.BooleanField(default=True, verbose_name='Принимаю условия обработки персональных данных ')
     price = models.DecimalField(max_digits=9, decimal_places=0, verbose_name='Цена', default=0)
+    courier = models.ForeignKey('Courier', default=None, null=True, on_delete=models.CASCADE, verbose_name='Курьер')
 
     def __str__(self):
         return f'Заказ № {self.number}'
@@ -25,3 +26,10 @@ class Payment(models.Model):
 
     def __str__(self):
         return self.pay_type
+
+
+class Courier(models.Model):
+    name = models.CharField(max_length=50, verbose_name='Курьер')
+
+    def __str__(self):
+        return self.name
