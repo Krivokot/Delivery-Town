@@ -13,10 +13,10 @@ var imagemin = require("gulp-imagemin");
 var del = require("del");
 var imagedel = require("del");
 var autoImports = require("gulp-auto-imports");
-var uglify = require("gulp-uglify");
+// var uglify = require("gulp-uglify");
 var gulp = require("gulp");
-var gutil = require("gulp-util");
-var ftp = require("vinyl-ftp");
+// var gutil = require("gulp-util");
+// var ftp = require("vinyl-ftp");
 
 gulp.task("del", function(){
   return del("build");
@@ -135,25 +135,25 @@ gulp.watch("source/img/**", gulp.series("buildImg"));
 gulp.task("build", gulp.series("del", "copy", "images","sass:load", "css", "norm"))
 gulp.task("start", gulp.series("build", "server"));
 
-gulp.task( 'deploy', function () {
+// gulp.task( 'deploy', function () {
 
-    var conn = ftp.create( {
-        host:     'server96.hosting.reg.ru',
-        user:     'u1198419',
-        password: 'cPp_O7Q6',
-        parallel: 10,
-        log:      gutil.log
-    } );
+//     var conn = ftp.create( {
+//         host:     'server96.hosting.reg.ru',
+//         user:     'u1198419',
+//         password: 'cPp_O7Q6',
+//         parallel: 10,
+//         log:      gutil.log
+//     } );
 
-    var globs = [
-        'build/**'
-    ];
+//     var globs = [
+//         'build/**'
+//     ];
 
-    // using base = '.' will transfer everything to /public_html correctly
-    // turn off buffering in gulp.src for best performance
+//     // using base = '.' will transfer everything to /public_html correctly
+//     // turn off buffering in gulp.src for best performance
 
-    return gulp.src( globs, {buffer: false } )
-        // .pipe( conn.newer( '/public_html' ) ) // only upload newer files
-        .pipe( conn.dest( '/www/delivery-town.ru' ) );
+//     return gulp.src( globs, {buffer: false } )
+//         // .pipe( conn.newer( '/public_html' ) ) // only upload newer files
+//         .pipe( conn.dest( '/www/delivery-town.ru' ) );
 
-} );
+// } );
